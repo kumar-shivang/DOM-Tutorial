@@ -1,28 +1,13 @@
 // DOM Manipulation
 
-const title = document.querySelector("#main-heading");
-console.log(title);
+// Traversal
 
-title.style.color = "red"; // turns title red
+let ul = document.querySelector("ul");
 
-const listItems = document.querySelectorAll(".list-items");
-console.log(listItems);
+console.log(ul.parentNode.parentNode);
+console.log(ul.parentElement.parentElement);
 
-listItems.forEach((item) => {
-  item.style.fontSize = "1.5rem";
-});
+let html = document.documentElement;
 
-// creating elements
-const ul = document.querySelector("ul");
-const li = document.createElement("li");
-
-ul.append(li);
-
-// Modifying text
-li.innerText = "x-men";
-
-li.setAttribute("class", "list-items");
-
-// get attribute
-
-console.log(title.getAttribute("id"));
+console.log(html.parentNode); // returns the html node itself
+console.log(html.parentElement); // returns none
