@@ -11,3 +11,18 @@ console.log(listItems);
 listItems.forEach((item) => {
   item.style.fontSize = "1.5rem";
 });
+
+// creating elements
+const ul = document.querySelector("ul");
+const li = document.createElement("li");
+
+ul.append(li);
+
+// Modifying text
+li.innerText = "x-men";
+
+li.setAttribute("class", "list-items");
+
+// get attribute
+
+console.log(title.getAttribute("id"));
