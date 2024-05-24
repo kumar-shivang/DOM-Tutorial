@@ -1,24 +1,24 @@
 // DOM Manipulation
+// Event Listners
 
-// Traversal
+const btn2 = document.querySelector("#btn-2");
 
-let ul = document.querySelector("ul");
+function alertbtn() {
+  alert("Button 2 pressed");
+}
 
-console.log(ul.parentNode.parentNode);
-console.log(ul.parentElement.parentElement);
+btn2.addEventListener("click", alertbtn);
 
-let html = document.documentElement;
+const box3 = document.querySelector("#box-3");
 
-console.log(html.parentNode); // returns the html node itself
-console.log(html.parentElement); // returns none
+box3.addEventListener("mouseover", () => {
+  const boxes = document.querySelectorAll(".box");
+  boxes.forEach((element) => {
+    element.style.backgroundColor = "pink";
+  });
+});
 
-// Child node treversal
-
-let ulChildern = ul.childNodes;
-console.log(ulChildern);
-
-ulChildern.forEach((element) => {
-  if (element.nodeName === "LI") {
-    element.style.backgroundColor = "blue";
-  }
+box3.addEventListener("mouseout", () => {
+  const boxes = document.querySelectorAll(".box");
+  boxes.forEach((box) => (box.style.backgroundColor = "transparent"));
 });
