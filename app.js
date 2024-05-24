@@ -11,3 +11,14 @@ let html = document.documentElement;
 
 console.log(html.parentNode); // returns the html node itself
 console.log(html.parentElement); // returns none
+
+// Child node treversal
+
+let ulChildern = ul.childNodes;
+console.log(ulChildern);
+
+ulChildern.forEach((element) => {
+  if (element.nodeName === "LI") {
+    element.style.backgroundColor = "blue";
+  }
+});
